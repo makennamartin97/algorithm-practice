@@ -8,3 +8,5 @@ toUpperCase(); //converts a string to uppercase letters.
 split(); //separates with comma
 slice(start,end); //extracts parts of a string and returns the extracted parts in a new string.
 //start is required (where to begin extraction), end optional
+reverse(); //reverses elements in an array
+sort(); //sorts elements alphabetically, stores as strings by default
