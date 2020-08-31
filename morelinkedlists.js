@@ -54,6 +54,10 @@ class LinkedList {
         console.log("The last node is: " + lastnode.data);
         return lastnode;
     }
+    getFirst(){
+        return this.head;
+   
+    }
 
 }
 //create 2 list nodes
@@ -70,11 +74,11 @@ node4.next = null;
 //creating linked list with node1
 let list = new LinkedList(node1)
 //accessing a val
-console.log(list.head.next.data)
+//console.log(list.head.next.data)
 //getting size
-list.size()
+//list.size()
 //getting last node val
-console.log(list.getLast())
+console.log(list.getFirst())
 //clearing list
 //list.clear();
 //printing list
