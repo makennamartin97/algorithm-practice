@@ -2,7 +2,7 @@
 //contains 2 items: the data, and the pointer to the next node
 class ListNode {
     constructor(data) {
-        this.data = data
+        this.data = data;
         this.next = null                
     }
 }
@@ -10,8 +10,9 @@ class ListNode {
 //if the head node is not passed, the head is initialised to null.
 class LinkedList {
     constructor(head = null) {
-        this.head = head
+        this.head = head;
     }
+
     //linked list methods (size, clear, getlast, getfirst)
     print(){
         console.log("printing...")
@@ -35,12 +36,14 @@ class LinkedList {
         console.log("# of nodes: " + count);
         return count;
     }
+
     //clear
     //This method empties out the list.
     clear(){
         this.head = null;
         return this.head;
     }
+
     //getLast
     //This method returns the last node of the linked list.
     getLast(){
@@ -54,11 +57,13 @@ class LinkedList {
         console.log("The last node is: " + lastnode.data);
         return lastnode;
     }
+
     //get first node
     getFirst(){
         return this.head;
    
     }
+
     //add new node to end 
     add(data){
         // creates a new node 
@@ -79,7 +84,10 @@ class LinkedList {
         }
     }
 
+
+
 }
+
 //create 4 list nodes
 let node1 = new ListNode(2)
 let node2 = new ListNode(5)
@@ -109,6 +117,10 @@ let list = new LinkedList(node1)
 
 //adding new node to end
 list.add(15)
+
+//inserting new node at index
+list.insertAt(30,2)
+list.insertAt(18,10)
 
 //printing list
 list.print();
