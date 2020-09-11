@@ -1,4 +1,5 @@
 //binary tree preorder traversal
+//visiting the root first
 
 /**
  * Definition for a binary tree node.
