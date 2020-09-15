@@ -1,35 +1,25 @@
-//check to see if 2 binary search trees are identical
+//leetcode: check to see if 2 binary search trees are identical
 
-// Node class 
-class BinaryTreeNode 
-{ 
-    constructor(data) 
-    { 
-        this.data = data; 
-        this.left = null; 
-        this.right = null; 
-    } 
-}
-
-//using Depth first traversal and recursion
-function areIdentical(root1, root2){
-    if(!root1 && !root2){
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {boolean}
+ */
+var isSameTree = function(p, q) {
+    if(!p && !q){
         return true
     }
-    if(root1 && root2){
-        return(root1.data === root2.data &&
-            areIdentical(root1.left, root2.left) &&
-            areIdentical(root1.right, root2.right))
+    else if(!p || !q || p.val !== q.val){
+        return false
     }
-
-    return false;
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+    
 };
-
-
-if (areIdentical(root1, root2)) {
-    console.log(root1, root2);
-    console.log("The trees are identical");
-  } else {
-    console.log(root1, root2);
-    console.log("The trees are not identical");
-  }
