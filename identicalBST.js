@@ -10,6 +10,8 @@ class BinaryTreeNode
         this.right = null; 
     } 
 }
+
+//using Depth first traversal and recursion
 function areIdentical(root1, root2){
     if(!root1 && !root2){
         return true
