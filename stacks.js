@@ -3,17 +3,17 @@
 
 class Stack {
     constructor(){
-        this.data = []; //an array in which we store the value
+        this.stack = []; //an array in which we store the value
         this.top = 0; //points to top of index
     }
     push(element) {
-        this.data[this.top] = element;
+        this.stack[this.top] = element;
         this.top = this.top + 1;
     }
     pop(){
         if( this.isEmpty() === false ) {
             this.top = this.top-1;
-            return this.data.pop();
+            return this.stack.pop();
         }
     }
     length(){
@@ -24,7 +24,7 @@ class Stack {
         console.log("Printing stack...")
         var top = this.top - 1; // because top points to index where new element to be inserted
         while(top >= 0){
-            console.log(this.data[top]);
+            console.log(this.stack[top]);
             top--;
         }
     }
@@ -40,12 +40,12 @@ class Stack {
         if(index != 0){
             this._reverse(index-1)
         }
-        console.log(this.data[index]);
+        console.log(this.stack[index]);
     }
     //getting top element
     peek(){
-        console.log("The top is: " + this.data[this.top-1]);
-        return this.data[this.top-1];
+        console.log("The top is: " + this.stack[this.top-1]);
+        return this.stack[this.top-1];
     }
 
 }
