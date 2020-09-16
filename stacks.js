@@ -62,3 +62,4 @@ newstack.print();
 newstack2.isEmpty();
 newstack.reverse();
 newstack.peek();
+newstack.print();
