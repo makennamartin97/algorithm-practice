@@ -15,8 +15,6 @@ function ifRecursive(n){
     }else{
         return n * ifRecursive(n-1);
 
-        
-
     }
     
 }

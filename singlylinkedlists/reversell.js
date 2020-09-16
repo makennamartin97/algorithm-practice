@@ -1,4 +1,4 @@
-//reverse linked list
+//reverse singly linked list
 class LinkedListNode {
     constructor(value) {
       this.value = value;
