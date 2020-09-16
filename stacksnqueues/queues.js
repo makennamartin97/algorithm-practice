@@ -4,7 +4,7 @@ class Queue {
    
     constructor(){
       
-      this.data = []; //the list we store the elements
+      this.queue = []; //the list we store the elements
       this.tail = 0; //is used to store the position in which the next element will be stored
       this.size = 10; //maximum # of elements a queue can have
     }
@@ -14,7 +14,7 @@ class Queue {
     //where the new element will be inserted.
     enqueue(element){
         if(this.tail < this.size){
-            this.data[this.tail] = element;
+            this.queue[this.tail] = element;
             this.tail++;
         }
     }
@@ -29,32 +29,32 @@ class Queue {
     getFront(){
         if(this.isEmpty() === false){
             console.log("First element: " + this.data[0])
-            return this.data[0];
+            return this.queue[0];
         }
     }
     getLast(){
         if(this.isEmpty() === false){
-            console.log("Last element: "+ this.data[this.tail-1])
-            return this.data[this.tail-1];
+            console.log("Last element: "+ this.queue[this.tail-1])
+            return this.queue[this.tail-1];
         }
     }
     //deleting the first element to be added
     dequeue(){
         if(this.isEmpty() === false){
             this.tail--;
-            return this.data.shift();
+            return this.queue.shift();
         }
 
     }
     print(){
         console.log("Printing queue...")
         for(let i = 0; i < this.tail; i++){
-            console.log(this.data[i]);
+            console.log(this.queue[i]);
         }
     }
     //Delete all elements of the queue and set the tail to 0.
     reset(){
-        this.data.length = 0;
+        this.queue.length = 0;
         this.tail = 0;
     }
  }
