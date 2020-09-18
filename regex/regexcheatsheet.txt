@@ -1,0 +1,42 @@
+regex cheatsheet
+~regular expression~
+
+modifiers (used to perform case-insensitive and global searches)
+g - perform a global match(find all matches rather than stopping after the first match)
+i - perform case insensitive matching
+m - perform multiline matching
+
+brackets (used to find a range of characters)
+[abc] - find any char between the brackets
+[^abc] - any char NOT between
+[0-9] - any digit between the brackets
+[^0-9] - any digit NOT between (any non digit)
+(x|y) - find any of the alternatives specified / or
+
+metacharacters (chars with special meaning)
+. - Find a single character, except newline or line terminator
+\w - find a word char
+\W - Find a non-word character
+\d - find a digit
+\D - non digit
+\s - find a whitespace character
+\S - non whitespace char
+\b - find a match at the beginning/end of a word ex: \bHI, end like this: HI\b
+\B - Find a match, but not at the beginning/end of a word
+\0 - find a null char
+\n - find a new line char
+
+quantifiers
+n+ - matches any string that contains at least 1 n
+n* - any string that contains zero or more occurrences of n
+n? - zero or one occurrences of n
+n{X} - any string that contains a sequence of X n's
+n{X,} - Matches any string that contains a sequence of at least X n's
+n$ - Matches any string with n at the end of it
+^n - any string with n at the beginning of it
+
+regexp obj methods
+toString() - 	Returns the string value of the regular expression
+test() - 	Tests for a match in a string. Returns true or false
+exec() - Tests for a match in a string. Returns the first match
+
