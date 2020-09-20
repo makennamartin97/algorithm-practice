@@ -1,26 +1,32 @@
-class BstNode {
-    constructor(data){
-        this.data = data; 
-        this.left = null; 
-        this.right = null; 
-    }
-};
-class BinarySearchTree 
-{ 
-    constructor() 
-    { 
-        // root of a binary seach tree 
-        this.root = null; 
-    } 
-}
-function findMin(root){
-    if(root === null){
-        return null
-    }
-    while(root.left){
-        root = root.left;
-   
-    }
-    return root.data;
 
+var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
+function Node(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+}
+function BinarySearchTree() {
+  this.root = null;
+  // change code below this line
+  this.findMin=function(){
+    if(!this.root){
+      return null;
+    }
+    let curr = this.root;
+    while(curr.left){
+      curr = curr.left;
+    }
+    return curr.value;
+  }
+  this.findMax=function(){
+    if(!this.root){
+      return null;
+    }
+    let curr = this.root;
+    while(curr.right){
+      curr = curr.right
+    }
+    return curr.value;
+  }
+  // change code above this line
 }
