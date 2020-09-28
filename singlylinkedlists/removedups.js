@@ -6,7 +6,7 @@
 //is a duplicate by comparing its value to the node after 
 //it in the list. If it is a duplicate, we change the next 
 //pointer of the current node so that it skips the next 
-//node and points directly to the one after the next node.
+// node and points directly to the one after the next node.
 
 /**
  * Definition for singly-linked list.
