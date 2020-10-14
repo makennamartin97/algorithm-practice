@@ -8,7 +8,7 @@ function displayNameCountry(lists){
     }
 }
 
-let lists = [
+let students = [
    {name: 'Remy', country: 'Korea'},
    {name: 'Chuck', country: 'China'},
    {name: 'Osmund', country: 'U.S.A.'},
@@ -19,4 +19,4 @@ let lists = [
 ];
 
 //testing
-console.log(displayNameCountry(lists))
+console.log(displayNameCountry(students))
