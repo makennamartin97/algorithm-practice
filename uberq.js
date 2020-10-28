@@ -25,5 +25,5 @@ function fraction(num, denom){
 console.log(fraction(1,3)) //0.(3)
 console.log(fraction(3,1)) //3
 console.log(fraction(2,3)) //0.(6)
-console.log(fraction(1,2)) 
+console.log(fraction(1,2)) //0.5
 
