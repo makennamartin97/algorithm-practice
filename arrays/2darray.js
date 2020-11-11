@@ -1,3 +1,5 @@
+//freecodecamp
+//return array of the largest number of each subarray in an array
 function largestOfFour(arr) {
     let res = [];
     for(var i = 0; i < arr.length;i++){
