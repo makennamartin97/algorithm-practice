@@ -16,5 +16,21 @@ function findmissing(arr){
     return sumwithn - sum;
 
 }
-const arr = [4,1,3,6,2];
-console.log(findmissing(arr));
+const arr = [4,1,3,6,5,2];
+//console.log(findmissing(arr));
+
+// naive solution
+function naiveway(arr){
+    let n = arr.length+1;
+    for(let i = 0; i < arr.length; i++){
+        if(arr.includes(n)){
+            n--;
+        }
+        else{
+            return n
+        }
+    }
+
+
+}
+console.log(naiveway(arr))
