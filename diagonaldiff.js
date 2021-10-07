@@ -21,4 +21,4 @@ function diagonaldiff(arr){
     console.log(d1,d2, "diff:", Math.abs(d1-d2))
     return Math.abs(d1 - d2)
 }
-console.log(diagonaldiff(arr))
+console.log(diagonaldiff(arr)) //16 2 diff: 4
